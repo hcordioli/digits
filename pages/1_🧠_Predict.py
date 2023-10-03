@@ -3,6 +3,7 @@ import glob
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
+import os
 
 st.markdown("# Load image and predict its class")
 
@@ -10,7 +11,7 @@ col1, col2 = st.columns(2)  # 1: Select File button;  2: Predict Button
 col3, col4 = st.columns(2)  # 3: Loaded Image; 4: Prediction
 
 filepath = "./data/*.jpeg" 
-file_list = [f.split("\\")[1] for f in glob.glob(filepath)]
+file_list = [os.path.basename(f) for f in glob.glob(filepath)]
 
 with col1:
     picked_image = st.selectbox('Pick a file:', file_list)
