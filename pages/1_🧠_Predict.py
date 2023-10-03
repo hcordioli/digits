@@ -15,7 +15,7 @@ file_list = [os.path.basename(f) for f in glob.glob(filepath)]
 
 with col1:
     picked_image = st.selectbox('Pick a file:', file_list)
-    input_filename = ".\data\\" + picked_image
+    input_filename = "./data/" + picked_image
     img=mpimg.imread(input_filename)
 
 with col2:
