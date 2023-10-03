@@ -1,5 +1,6 @@
 streamlit
 tensorflow
+keras
 glob2
 matplotlib
 numpy
