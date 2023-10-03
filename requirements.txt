@@ -1,0 +1,6 @@
+streamlit
+tensorflow
+glob
+matplotlib.pyplot
+matplotlib.image
+numpy
