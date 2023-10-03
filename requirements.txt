@@ -1,6 +1,5 @@
 streamlit
 tensorflow
 glob2
-matplotlib.pyplot
-matplotlib.image
+matplotlib
 numpy
