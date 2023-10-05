@@ -1,6 +1,5 @@
 streamlit
-tensorflow==2.13.0
-keras
+keras-core
 glob2
 matplotlib
 numpy
