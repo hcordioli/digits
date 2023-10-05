@@ -1,5 +1,6 @@
 streamlit
-keras-core
+keras
+tensorflow
 glob2
 matplotlib
 numpy
