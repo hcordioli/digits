@@ -21,7 +21,7 @@ st.markdown(
 load_model = st.button("Load Model")
 if load_model:
     try:
-        fname = "./data/digit_recognizer.keras"
+        fname = "./data/digit_recognizer_h5"
         hdr_model = tf.keras.saving.load_model(fname)
         st.session_state['model_loaded'] = True
         if 'hdr_model' not in st.session_state:
