@@ -18,11 +18,18 @@ st.markdown(
 """
 )
 
-load_model = st.button("Load Model")
-if load_model:
-    try:
-        fname = "./data/digit_recognizer.h5"
+@st.cache_resource  # 👈 Add the caching decorator
+def load_model():
+    with st.spinner('Loading Handwriten Digit Recognizer model...'):
+        fname = "./data/digit_recognizer.keras"
         hdr_model = tf.keras.saving.load_model(fname)
+        st.success('Done!')
+    return (hdr_model)
+
+load_model_button = st.button("Load Model")
+if load_model_button:
+    try:
+        hdr_model = load_model()
         st.session_state['model_loaded'] = True
         if 'hdr_model' not in st.session_state:
             st.session_state['hdr_model'] = hdr_model
