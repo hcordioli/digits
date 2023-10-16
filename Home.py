@@ -21,7 +21,7 @@ st.markdown(
 @st.cache_resource  # 👈 Add the caching decorator
 def load_model():
     with st.spinner('Loading Handwriten Digit Recognizer model...'):
-        fname = "./data/digit_recognizer.keras"
+        fname = "./data/digit_recognizer.h5"
         hdr_model = tf.keras.saving.load_model(fname)
         st.success('Done!')
     return (hdr_model)
